@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="no_labels=true,update_synch=true" audit="true" db_object_id="98ff30324010121087de8045c806ff98" extends="sys_metadata" label="Dictionary Entry" max_length="40" name="sys_dictionary" read_roles="admin" text_index="true" type="collection">
+        <element attributes="encode_utf8=false" label="Patient name" max_length="32" name="u_patient_name" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Patient Address" max_length="40" name="u_patient_address" type="string"/>
+        <element attributes="encode_utf8=false" label="Doctor name" max_length="32" name="u_doctor_name" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_doctor_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_patient_name"/>
+        </index>
+    </element>
+</database>
